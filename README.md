@@ -1,0 +1,2 @@
+# AngularJS-Firebase Web App 
+create Web App Using Angular.js with Firebase by following tutorial into [code.tutsplus.com](http://code.tutsplus.com/tutorials/creating-a-web-app-from-scratch-using-angularjs-and-firebase--cms-22391)  
