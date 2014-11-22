@@ -1,10 +1,7 @@
 'use strict';
 /**
- * myApp Module
+ * myApp.auth Module
  * @author ahmed hamdy <ahmedhamdy90@gmail.com>
  */
 angular
-  .module('myApp', [
-	'ngRoute',
-	'myApp.auth'
-  ]);
+    .module('myApp.auth', [])
