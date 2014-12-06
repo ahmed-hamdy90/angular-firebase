@@ -7,15 +7,16 @@
  */
 function config ($routeProvider, $locationProvider) {
 
-	$locationProvider
-		.html5Mode(true);
+    $locationProvider
+        .html5Mode(true);
 
     $routeProvider
         .when('/signIn', {            
             templateUrl: "authentication/signIn.html",
             controller:  "SignInCtrl",
             controllerAs: "signIn"
-        });    
+        });
+            
 };
 
 // inject $routeProvider to config method
