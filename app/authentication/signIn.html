@@ -3,12 +3,12 @@
         <h2>AngularJS & Firebase App!</h2>
     </div>
     <form class="form-signin" role="form">
-        <input type="email" class="form-control" placeholder="Email address" required="" autofocus="">
-        <input type="password" class="form-control" placeholder="Password" required="">
+        <input type="email" class="form-control" placeholder="Email address" ng-model="signIn.email">
+        <input type="password" class="form-control" placeholder="Password" ng-model="signIn.password">
         <div class="checkbox">
             <label><input type="checkbox" value="remember-me">Remember me</label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="signIn.login($event)">Sign In</button>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
   </form>
 </div>

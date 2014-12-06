@@ -9,19 +9,26 @@
   <title>AngularJS & Firebase Web App</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/angular-firebase/app/"></base>
+
+  <!-- include Styles files--> 
   <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
   <!--<link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">-->
   <link rel="stylesheet" href="app.css">
   <script src="vendor/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+
 </head>
 <body>
   <div ng-view></div>
   <script src="vendor/angular/angular.js"></script>
   <script src="vendor/angular-route/angular-route.js"></script>
+  <script src="vendor/firebase/firebase.js"></script>
+  <script src="vendor/angularfire/dist/angularfire.js"></script>
   <script src="app.js"></script>
   <script src="config.js"></script>
   <script src="authentication/auth.js"></script>
   <script src="authentication/config.js"></script>
+  <script src="authentication/SignInCtrl.js"></script>
 </body>
 </html>
