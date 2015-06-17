@@ -2,7 +2,7 @@
 /**
  * Configure the Routes for myApp.auth module
  * @ngInject $routeProvider
- * @param {$routeProvider} $routeProvider 
+ * @param {$routeProvider} $routeProvider
  * @param {$locationProvider} $locationProvider $location service provider
  */
 function config ($routeProvider, $locationProvider) {
@@ -11,17 +11,17 @@ function config ($routeProvider, $locationProvider) {
         .html5Mode(true);
 
     $routeProvider
-        .when('/signIn', {            
-            templateUrl: "authentication/signIn.html",
+        .when('/signIn', {
+            templateUrl: "app/authentication/signIn.html",
             controller:  "SignInCtrl",
             controllerAs: "signIn"
         });
-            
+
 };
 
 // inject $routeProvider to config method
 config.$inject = ['$routeProvider', '$locationProvider'];
 
 angular
-  .module('myApp.auth')    
+  .module('myApp.auth')
   .config(config);

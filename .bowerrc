@@ -1,5 +1,7 @@
 {
   "directory"   : "app/vendor",
   "proxy"       : "http://<host>:<port>",
-  "https-proxy" : "http://<host>:<port>"
+  "https-proxy" : "http://<host>:<port>",
+  "strict-ssl"  : false,
+  "timeout"     : 30000
 }
