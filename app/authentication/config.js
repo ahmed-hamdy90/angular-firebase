@@ -11,7 +11,7 @@ function config ($routeProvider, $locationProvider) {
         .html5Mode(true);
 
     $routeProvider
-        .when('/signIn', {
+        .when('/app/signIn', {
             templateUrl: "app/authentication/signIn.html",
             controller:  "SignInCtrl",
             controllerAs: "signIn"

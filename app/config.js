@@ -13,7 +13,7 @@ function config ($routeProvider, $locationProvider) {
 
     $routeProvider
         .otherwise({
-    	    redirectTo: '/signIn'
+    	    redirectTo: '/app/signIn'
         });
 };
 
