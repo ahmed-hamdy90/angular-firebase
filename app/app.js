@@ -6,6 +6,8 @@
 angular
   .module('myApp', [
 	'ngRoute',
-	'myApp.auth',
+
+	'myApp.User',
+
 	'firebase'
   ]);

@@ -1,6 +1,6 @@
 'use strict';
 /**
- * Configure the Routes for myApp.auth module
+ * Configure the Routes for myApp.User module
  * @ngInject $routeProvider
  * @param {$routeProvider} $routeProvider
  * @param {$locationProvider} $locationProvider $location service provider
@@ -12,7 +12,7 @@ function config ($routeProvider, $locationProvider) {
 
     $routeProvider
         .when('/app/signIn', {
-            templateUrl: "app/authentication/signIn.html",
+            templateUrl: "app/user/signIn.html",
             controller:  "SignInCtrl",
             controllerAs: "signIn"
         });
@@ -23,5 +23,5 @@ function config ($routeProvider, $locationProvider) {
 config.$inject = ['$routeProvider', '$locationProvider'];
 
 angular
-  .module('myApp.auth')
+  .module('myApp.User')
   .config(config);

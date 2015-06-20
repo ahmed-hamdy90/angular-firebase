@@ -44,5 +44,5 @@ function SignInCtrl ($firebase) {
 SignInCtrl.inject = ['$firebase'];
 
 angular
-  .module('myApp.auth')
+  .module('myApp.User')
   .controller('SignInCtrl', SignInCtrl);
