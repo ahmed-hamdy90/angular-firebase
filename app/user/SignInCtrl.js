@@ -3,20 +3,21 @@
 /**
  * SignIn Controller
  */
-function SignInCtrl ($firebase) {
+function SignInCtrl ($location, $firebase) {
+	
     // refer to $scope
-	var signIn = this; 
+	var user = this; 
 
 	/**
-	 * login function
-	 * @param  {[type]} event [description]
+	 * login function 
+	 * @param {Object} event Event Object for all events into DOM [repersent in angularjs as $event]
 	 */
-	signIn.login = function (event) {
+	user.login = function (event) {
 
  		event.preventDefault();
 
-	    var userName = signIn.email;
-	    var password = signIn.password;
+	    var userName = user.email;
+	    var password = user.password;
 	    var firebaseObj = new Firebase("https://my-angular-firebase.firebaseio.com/");
 
 	    console.log("user name is: "+userName+" and password is :"+password);
@@ -37,11 +38,22 @@ function SignInCtrl ($firebase) {
 	    	} 	
 
 	    });
+	}
+
+   /**
+    * register function
+    * @param {Object} event Event Object for all events into DOM [repersent in angularjs as $event]
+    */
+	user.register = function (event) {
+		
+		event.preventDefault();
+
+		$location.path('/signUp');
 	} 
 	
 };
 
-SignInCtrl.inject = ['$firebase'];
+SignInCtrl.inject = ['$location','$firebase'];
 
 angular
   .module('myApp.User')

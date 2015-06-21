@@ -14,7 +14,12 @@ function config ($routeProvider, $locationProvider) {
         .when('/app/signIn', {
             templateUrl: "app/user/signIn.html",
             controller:  "SignInCtrl",
-            controllerAs: "signIn"
+            controllerAs: "user"
+        })
+        .when('/app/signIn', {
+            templateUrl: "app/user/signUp.html",
+            controller:  "SignUpCtrl",
+            controllerAs: "user"
         });
 
 };
