@@ -3,8 +3,8 @@
 /**
  * Configure the Routes for myApp
  * @ngInject $routeProvider
- * @param {$routeProvider} $routeProvider
- * @param {$locationProvider} $locationProvider $location service provider
+ * @param {Object} $routeProvider    $route service provider     
+ * @param {Object} $locationProvider $location service provider
  */
 function config ($routeProvider, $locationProvider) {
 
@@ -13,7 +13,7 @@ function config ($routeProvider, $locationProvider) {
 
     $routeProvider
         .otherwise({
-    	    redirectTo: '/app/signIn'
+    	    redirectTo: '/signIn'
         });
 };
 

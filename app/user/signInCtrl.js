@@ -2,14 +2,15 @@
 
 /**
  * SignIn Controller
+ * <br/> Responsible for User Login functionality
  */
 function SignInCtrl ($location, $firebase) {
-	
-    // refer to $scope
-	var user = this; 
+
+  // refer to $scope
+	var user = this;
 
 	/**
-	 * login function 
+	 * User login function
 	 * @param {Object} event Event Object for all events into DOM [repersent in angularjs as $event]
 	 */
 	user.login = function (event) {
@@ -26,33 +27,32 @@ function SignInCtrl ($location, $firebase) {
 	    	email : userName,
 	    	password : password
 	    }, function (error, authData) {
-	    	
+
 	    	if (error === null ) {
 	    	    // user authenticated with Firebase
     			console.log("User ID: " + authData.uid + ", Provider: " + authData.provider);
-    			alert("Authentication Successful");		
+    			alert("Authentication Successful");
 	    	} else {
 
     			console.log("Error authenticating user:", error);
     			alert("Authentication Failure");
-	    	} 	
+	    	}
 
 	    });
 	}
 
-   /**
-    * register function
-    * @param {Object} event Event Object for all events into DOM [repersent in angularjs as $event]
-    */
-	user.register = function (event) {
-		
-		event.preventDefault();
+  /**
+   * change view click handler
+   * @param {String} newPath new path string which we need to switch url to it
+   */
+	user.changeView = function (newPath) {
 
-		$location.path('/signUp');
-	} 
-	
+		$location.path(newPath);
+	}
+
 };
 
+// Inject dependencies for SignInCtrl
 SignInCtrl.inject = ['$location','$firebase'];
 
 angular

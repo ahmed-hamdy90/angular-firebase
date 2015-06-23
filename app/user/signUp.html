@@ -4,22 +4,22 @@
     </div>
     <form class="form-signin" role="form">
         <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email address" ng-model="user.email">    
+            <input type="email" class="form-control" placeholder="Email address" ng-model="user.email">
         </div>
         <div class="form-group">
-            <div style="text-align:right;">                
+            <div style="text-align:right;">
                 <span>minimum 8 characters</span>
             </div>
             <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
-        </div>                           
+        </div>
         <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="user.register($event)" >Register</button>
-        <div class="loginHorizontalLineContainer">            
+        <div class="loginHorizontalLineContainer">
             <hr class="loginHorizontalLine" />
                 <span>
                     <b>OR</b>
                 </span>
             <hr class="loginHorizontalLine" />
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="user.login($event)" >Login</button>
+        <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="user.changeView('/signIn')" >Login</button>
   </form>
 </div>

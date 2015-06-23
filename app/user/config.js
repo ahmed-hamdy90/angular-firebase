@@ -2,8 +2,8 @@
 /**
  * Configure the Routes for myApp.User module
  * @ngInject $routeProvider
- * @param {$routeProvider} $routeProvider
- * @param {$locationProvider} $locationProvider $location service provider
+ * @param {Object} $routeProvider    $route service provider
+ * @param {Object} $locationProvider $location service provider
  */
 function config ($routeProvider, $locationProvider) {
 
@@ -11,12 +11,12 @@ function config ($routeProvider, $locationProvider) {
         .html5Mode(true);
 
     $routeProvider
-        .when('/app/signIn', {
+        .when('/signIn', {
             templateUrl: "app/user/signIn.html",
             controller:  "SignInCtrl",
             controllerAs: "user"
         })
-        .when('/app/signIn', {
+        .when('/signUp', {
             templateUrl: "app/user/signUp.html",
             controller:  "SignUpCtrl",
             controllerAs: "user"

@@ -2,10 +2,11 @@
 
 /**
  * SignUp Controller
+ * <br/> Responsible for User Registration functionality
  */
 function SignUpCtrl ($location, $firebase) {
-	
-    // refer to $scope
+
+  // refer to $scope
 	var user = this;
 
    /**
@@ -13,25 +14,24 @@ function SignUpCtrl ($location, $firebase) {
     * @param {Object} event Event Object for all events into DOM [repersent in angularjs as $event]
     */
 	user.register = function (event) {
-		
+
 		event.preventDefault();
 
-		
-	} 
+
+	}
 
 	/**
-	 * login function 
-	 * @param {Object} event Event Object for all events into DOM [repersent in angularjs as $event]
-	 */
-	user.login = function (event) {
+	* change view click handler
+	* @param {String} newPath new path string which we need to switch url to it
+	*/
+	user.changeView = function (newPath) {
 
- 		event.preventDefault();
+		$location.path(newPath);
+	}
 
-	    $location.path('/signIn');
-	} 
-	
 };
 
+// Inject dependencies for SignUpCtrl
 SignUpCtrl.inject = ['$location','$firebase'];
 
 angular
