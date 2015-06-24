@@ -12,3 +12,8 @@ hr.loginHorizontalLine {
 	padding: 0 10px;
 	width: 35%;
 }
+
+span.passwordNotice {
+	display: inline-block;
+	color: gray;
+}

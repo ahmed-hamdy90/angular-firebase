@@ -2,12 +2,13 @@
     <div class="jumbotron text-center" style="padding-bottom:0px;">
         <h2>AngularJS & Firebase App!</h2>
     </div>
-    <form class="form-signin" role="form">
-        <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email address" ng-model="user.email">
+    <form class="form-signin" role="form" name="signInForm">
+        <div class="form-group" ng-class="{'has-error': signInForm.email.$invalid}">
+            <p class="help-block" ng-show="signInForm.email.$invalid">Enter a valid Email</p>
+            <input class="form-control" type="email" name="email" placeholder="Email address" ng-model="user.email">
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
+            <input class="form-control" type="password" name="password" placeholder="Password" ng-model="user.password">
             <div style="text-align:right;">
                 <a href="#">Forget your password?</a>
             </div>
@@ -15,7 +16,8 @@
         <div class="checkbox">
             <label><input type="checkbox" value="remember-me">Remember me</label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="user.login($event)" >Login</button>
+        <button class="btn btn-lg btn-primary btn-block" name="loginButton" type="button"
+            ng-disabled="!user.email || !user.password" ng-click="user.login($event)" >Login</button>
         <div class="loginHorizontalLineContainer">
             <hr class="loginHorizontalLine" />
                 <span>
@@ -23,6 +25,7 @@
                 </span>
             <hr class="loginHorizontalLine" />
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="user.changeView('/signUp')" >Create a new account</button>
+        <button class="btn btn-lg btn-primary btn-block" name="registerButton" type="button"
+              ng-click="user.changeView('/signUp')" >Create a new account</button>
   </form>
 </div>
